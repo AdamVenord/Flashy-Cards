@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Table, Card, } from "semantic-ui-react";
+import { Table, } from "semantic-ui-react";
 import Flashcard from "./Flashcard";
 
 const Cards = ({ cardsArray, remove, }) => (
@@ -8,7 +8,7 @@ const Cards = ({ cardsArray, remove, }) => (
       <Table.Row>
         <Table.HeaderCell>Question</Table.HeaderCell>
         <Table.HeaderCell>Answer</Table.HeaderCell>
-        <Table.HeaderCell>Options</Table.HeaderCell>
+        <Table.HeaderCell>See Answer</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
 

@@ -23,8 +23,8 @@ class App extends Component {
     this.setState({ cards: [flashcard, ...this.state.cards], });
   }
 
-  removeFlashcards = (id) => {
-    const cards = this.state.contacts.filter( flashcard => {
+  removeFlashcard = (id) => {
+    const cards = this.state.cards.filter( flashcard => {
       if (flashcard.id !== id)
         return flashcard
     });
@@ -39,9 +39,6 @@ class App extends Component {
         <Header as="h1">React Flashy Cards</Header>
         <br />
         <Segment basic>
-          <Button icon color="blue" onClick={this.toggleForm}>
-          <Icon name={showForm ? 'angle double up' : 'angle double down'} />
-          </Button>
           { showForm ? <CardForm add={this.addFlashcard} /> : null }
         </Segment>
         <br />

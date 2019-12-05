@@ -17,13 +17,14 @@ class CardForm extends React.Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
+        <Form.Group widths="equal">
           <Form.Input 
             fluid 
             label="Question" 
             placeholder="Question" 
             name="question" 
             value={this.state.question} 
-            onChangge={this.handleChange}
+            onChange={this.handleChange}
           />
           <Form.Input 
             fluid 
@@ -32,8 +33,9 @@ class CardForm extends React.Component {
             name="answer" 
             value={this.state.answer} 
             onChange={this.handleChange}
-          />
-          <Form.Button>Submit</Form.Button>
+            />
+        </Form.Group>
+        <Form.Button>Submit</Form.Button>
       </Form>
     )  
   }
